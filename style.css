@@ -14,6 +14,22 @@
     --color5: #003439;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color5);
+}
+
 body {
     background-color: var(--color1);
     height: 100vh;
@@ -100,6 +116,7 @@ section {
     flex-wrap: wrap;
     align-items: center;
     min-height: 450px;
+    min-width: 400px;
 }
 
 .fisrt-section > div {
@@ -137,24 +154,112 @@ strong {
 .img-profile {
     border-radius: 50%;
     width: 100%;
-    border: 3px solid var(--color5);
+    border: 2px solid var(--color5);
+    box-shadow: 1px 1px 1px 1px var(--color5);
 }
 
-.icon-language {
+/* .icon-language {
     max-width: 350px;
     padding: 1rem;
     width: 90px;
-}
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
 
-.second-section {
+:is(.second-section, .fourth-section) {
     background-color: var(--color2);
-    color: var(--color3);
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    align-items: center;
+    justify-content: center;
     min-height: 400px;
+    gap: 3rem;
+    min-height: 550px;
+}
+
+.second-section ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.second-section ul li {
+    color: var(--color5);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.second-section ul li:hover {
+    color: var(--color3);
+    transition: 0.6s;
+    cursor: default;
 }
 
 .title {
     color: var(--color5);
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.third-section > div {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.third-section > div img {
+    width: 350px;
+    border-radius: 60px;
+    border: 2px solid var(--color5);
+    box-shadow: 1px 1px 1px 1px var(--color5);
+}
+
+.third-section > div p {
+    max-width: 600px;
+    color: var(--color3);
+    text-align: justify;
+}
+
+footer {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer > div {
+    justify-content: center;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+#my-project-list {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-project-list a {
+    text-decoration: none;
+    color: var(--color5);
+}
+
+#my-project-list a:hover {
+    color: var(--color3);
+    transition: 0.6s;
+    cursor: pointer;
 }
